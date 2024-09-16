@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="صوره 1.png" type="image/png">
+    <title>Blue Potato Website</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@400;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="menu-container">
+      <button class="menu-btn" id="menu-btn">☰</button>
+      <div class="menu" id="menu">
+        <a href="index.html">الصفحة الرئيسية</a>
+        <a href="contact.html">اتصل بنا </a>
+        <a href="social.html">مواقع التواصل الأجتماعي </a>
+      </div>
+    </div>
+
+    <div class="container">
+      <h1>هذا الموقع موقع البطاطس الزرقاء</h1>
+      <hr />
+
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img src="نعناعه.jfif" alt="Image 1" />
+        </div>
+        <div class="mySlides fade">
+          <img src="الحب.jpg" alt="Image 2" />
+        </div>
+        <div class="mySlides fade">
+          <img src="المحبين.jpg" alt="Image 3" />
+        </div>
+        <div class="mySlides fade">
+          <img src="المتجوزين.jpg" alt="Image 4" />
+        </div>
+        <div class="mySlides fade">
+          <img src="صحاب.jpg" alt="Image 5" />
+        </div>
+        <div class="mySlides fade">
+          <img src="السيوف.jpg" alt="Image 6" />
+        </div>
+        <div class="mySlides fade">
+          <img src="العربيه.jpg" alt="Image 7" />
+        </div>
+        <div class="mySlides fade">
+          <img src="الحاكم.jpg" alt="Image 8" />
+        </div>
+        <div class="mySlides fade">
+          <img src="الشيخ.jpeg" alt="Image 9" />
+        </div>
+        <div class="mySlides fade">
+          <img src="اهل.jpeg" alt="Image 10" />
+        </div>
+      </div>
+
+      <p>ما هي البطاطس الزرقاء؟</p>
+      <ul>
+        <li>
+            من مئة وخمسين تيكليون سنة، كان هناك كائن يُعرف باسم <span>بطوس</span>. كان ينتمي إلى فصيلة تُدعى <span>البطاطس الزرقاء</span>. كان <span>بطوس</span> كائنًا قويًا بشكل فوق الطبيعي، وهو الكائن الوحيد الذي كان قادرًا على التكاثر بشكل تلقائي. نتيجة لذلك، ظهرت كائنات جديدة، أحدها يُدعى <span>رجل البطاطس</span> والآخر <span>امرأة البطاطس</span>، وهما السبب في وجود <span>البطاطس الزرقاء</span>.
+            كان <span>رجل البطاطس</span> و<span>امرأة البطاطس</span> من أقوى الكائنات في الكون بفضل قوتهم الجسدية والعقلية والتكنولوجية الهائلة. كان لديهم معرفة واسعة في جميع مجالات الكون، وعاشوا على <span>الكوكب الأزرق</span> في بُعد أزرق، على بُعد مليارات السنوات الضوئية من الأرض.
+        
+
+
+        </li>
+      </ul>
+      <hr />
+      <p id="p2">
+        <span>البطاطس الزرقاء</span> هي بطاطس بس زرقاء. ده رابط
+        <a href="https://www.instagram.com/muraikhl/?hl=ar" target="_blank">للبطاطس الزرقاء</a>
+       الرسمية على كوكب الارض
+      </p>
+      <h1 style="font-size: 20px;"> Youssef Al-Muraikhi تم صناعة الموقع من قبل </h1>
+    </div>
+
+    <script>
+      let slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        const slides = document.getElementsByClassName("mySlides");
+        for (let i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 5000);
+      }
+
+      document.getElementById('menu-btn').addEventListener('click', () => {
+        const menu = document.getElementById('menu');
+        menu.classList.toggle('active');
+      });
+    </script>
+  </body>
+</html>

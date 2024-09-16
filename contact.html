@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="صوره 1.png" type="image/png">
+    <title>Contact - Blue Potato Website</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Handjet:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Handjet', sans-serif;
+        background-color: #e0f7fa;
+        line-height: 1.6;
+      }
+
+      .menu-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: calc(100% - 20px);
+        display: flex;
+        justify-content: flex-end;
+        padding: 5px 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+        backdrop-filter: blur(6px);
+        transition: background-color 0.3s ease;
+      }
+
+      .menu-btn {
+        background-color: transparent;
+        color: rgba(0, 51, 102, 0.8);
+        border: none;
+        padding: 10px 15px;
+        font-size: 18px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+
+      .menu-btn:hover {
+        background-color: rgba(0, 51, 102, 0.1);
+        transform: scale(1.05);
+      }
+
+      .menu {
+        display: none;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background-color: rgba(0, 51, 102, 0.8);
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        padding: 10px;
+        width: 180px;
+      }
+
+      .menu.active {
+        display: block;
+      }
+
+      .menu a {
+        display: block;
+        color: #fff;
+        text-decoration: none;
+        padding: 8px 10px;
+        font-size: 16px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      .menu a:hover {
+        background-color: #0044cc;
+        color: #fff;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        padding-top: 70px;
+      }
+
+      h1 {
+        text-align: center;
+        color: #003366;
+        font-size: 36px;
+        font-weight: 700;
+        margin: 20px 0;
+      }
+
+      p.contact-intro {
+        font-size: 20px;
+        color: #333;
+        text-align: center;
+        margin: 20px 0;
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      label {
+        display: block;
+        font-size: 20px;
+        font-weight: bold;
+        color: #003366;
+        margin-bottom: 5px;
+      }
+
+      input[type="text"], input[type="email"], textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 18px;
+      }
+
+      button[type="submit"] {
+        background-color: #0044cc;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 18px;
+        font-family: 'Handjet', sans-serif; /* تغيير نوع الخط */
+        font-weight: bold; /* جعل الخط عريضًا */
+        text-transform: uppercase; /* تحويل النص إلى أحرف كبيرة */
+        transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+
+      button[type="submit"]:hover {
+        background-color: #003366;
+        transform: scale(1.05);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      }
+
+      #form-status {
+        margin-top: 20px;
+        font-size: 18px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="menu-container">
+        <button id="nav-toggle" class="menu-btn">☰</button>
+        <nav id="nav-menu" class="menu">
+          <a href="index.html">الصفحة الرئيسية</a>
+          <a href="contact.html">اتصل بنا</a>
+          <a href="social.html">مواقع التواصل الأجتماعي</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <h1>اتصل بنا</h1>
+        <p class="contact-intro">اكتب رسالة لينا ومش هنرد عليك بس اكتب بليز </p>
+        <form id="contact-form">
+          <div class="form-group">
+            <label for="name">الاسم:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">الموقع الالكتروني:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="message">الرسالة:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+
+          <button type="submit" font>ابعت الرساله اللي مش هتتبعت</button>
+          <p id="form-status"></p>
+        </form>
+      </div>
+    </main>
+
+    <script>
+      const toggleButton = document.getElementById("nav-toggle");
+      const navMenu = document.getElementById("nav-menu");
+
+      toggleButton.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+      });
+
+      const contactForm = document.getElementById("contact-form");
+      const formStatus = document.getElementById("form-status");
+
+      contactForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        formStatus.textContent = "!رسالتك هتاخد مليار سنة عشان توصل لخوادم البطاطس الزرقاء وهنشوفها ومش هنرد عليها شكرا لك";
+        formStatus.style.color = "green";
+      });
+    </script>
+  </body>
+</html>
