@@ -13,10 +13,10 @@ html, body {
   width: calc(100% - 20px);
   display: flex;
   justify-content: flex-end;
-  padding: 5px 10px; /* تقليل المساحة حول القائمة */
+  padding: 5px 10px; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   z-index: 1000;
-  backdrop-filter: blur(6px); /* تأثير ضبابي عصري */
+  backdrop-filter: blur(6px); 
   transition: background-color 0.3s ease;
 }
 
@@ -24,7 +24,7 @@ html, body {
   background-color: transparent;
   color: rgba(0, 51, 102, 0.8);
   border: none;
-  padding: 10px 15px; /* تقليل حجم الزر */
+  padding: 10px 15px;
   font-size: 18px;
   cursor: pointer;
   border-radius: 5px;
@@ -32,20 +32,20 @@ html, body {
 }
 
 .menu-btn:hover {
-  background-color: rgba(0, 51, 102, 0.1); /* تغيير لون الخلفية عند التمرير */
+  background-color: rgba(0, 51, 102, 0.1); 
   transform: scale(1.05);
 }
 
 .menu {
   display: none;
   position: absolute;
-  top: 50px; /* رفع القائمة أسفل الزر */
+  top: 50px; 
   right: 0;
   background-color: rgba(0, 51, 102, 0.8);
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   padding: 10px;
-  width: 180px; /* عرض ثابت للقائمة */
+  width: 180px; 
 }
 
 .menu.active {
@@ -56,7 +56,7 @@ html, body {
   display: block;
   color: #fff;
   text-decoration: none;
-  padding: 10px 15px; /* تكبير الحشو داخل العناصر */
+  padding: 10px 15px; 
   font-size: 18px;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -70,7 +70,7 @@ html, body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  padding-top: 70px; /* تأكيد على وجود مساحة كافية أعلى المحتوى */
+  padding-top: 70px;
 }
 
 h1 {
@@ -96,7 +96,7 @@ h1 {
   display: none;
   width: 100%;
   height: 0;
-  padding-bottom: 100%; /* Maintain square aspect ratio */
+  padding-bottom: 100%;
   position: relative;
 }
 
@@ -107,14 +107,14 @@ h1 {
   width: 100%;
   height: 100%;
   border-radius:10px ;
-  object-fit: cover; /* Crop image to fit square */
+  object-fit: cover; 
   
   transition: transform 0.3s ease;
 }
 
 .mySlides img:hover, 
 .mySlides img:active {
-  transform: scale(1.1); /* Zoom effect */
+  transform: scale(1.1); 
 }
 
 hr {
