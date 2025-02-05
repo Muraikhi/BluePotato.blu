@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Confirmation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Reverted Color Scheme CSS Variables */
+        :root {
+            --primary-color: #0A5EB0;         /* Original Primary Blue Color */
+            --secondary-color: #CCE4E4;       /* Original Secondary Light Blue Color */
+            --text-color: #333;              /* Dark text color */
+            --background-color: #f8f9fa;      /* Light background color for page */
+            --content-background-color: #fff; /* White background for content box */
+            --font-family: 'Handjet', sans-serif; /* Handjet Font */
+            --border-radius-lg: 25px;         /* Larger Border Radius */
+            --border-radius-sm: 8px;          /* Smaller Border Radius */
+            --box-shadow-md: 0 8px 20px rgba(0,0,0,0.15);
+            --box-shadow-sm: 0 2px 5px rgba(0,0,0,0.08);
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="%23ddd" stroke-width="0.5"%3E%3Cpath d="M0 0h40v40H0z"/%3E%3Cpath d="M20 0v40M0 20h40"/%3E%3C/svg%3E'); /* Subtle grid background */
+        }
+
+        .confirmation-container {
+            font-family: var(--font-family);
+            background-color: var(--content-background-color);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--box-shadow-md);
+            padding: 60px;
+            text-align: center;
+            max-width: 600px;
+            width: 95%;
+        }
+
+        .confirmation-header {
+            margin-bottom: 40px;
+        }
+
+        .confirmation-title {
+            font-family: var(--font-family);
+            color: var(--primary-color); /* Original Primary Color */
+            font-size: 3em;
+            margin-bottom: 15px;
+            letter-spacing: -1px;
+        }
+
+        .confirmation-subtitle {
+            font-family: var(--font-family);
+            color: var(--text-color); /* Reverted to darker text color for subtitle */
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .confirmation-message {
+            font-family: var(--font-family);
+            font-size: 1.1em;
+            line-height: 1.7;
+            margin-bottom: 35px;
+            color: var(--text-color); /* Reverted to darker text color for message */
+        }
+
+        .non-interactive-button {
+            font-family: var(--font-family);
+            background-color: var(--primary-color); /* Original Primary Color */
+            color: var(--secondary-color); /* Original Secondary Color */
+            border: none;
+            padding: 15px 40px;
+            border-radius: var(--border-radius-sm);
+            font-size: 1.1em;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            box-shadow: var(--box-shadow-sm);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .non-interactive-button:hover {
+            transform: scale(1.03);
+        }
+
+        .icon-check {
+            display: block;
+            margin: 0 auto 30px;
+            width: 70px;
+            height: 70px;
+            fill: var(--primary-color); /* Original Primary Color */
+        }
+
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .confirmation-container {
+                padding: 40px;
+            }
+            .confirmation-title {
+                font-size: 2.2em;
+            }
+            .confirmation-subtitle {
+                font-size: 1em;
+            }
+            .confirmation-message {
+                font-size: 1em;
+                margin-bottom: 25px;
+            }
+            .non-interactive-button {
+                padding: 12px 30px;
+                font-size: 1em;
+            }
+            .icon-check {
+                width: 60px;
+                height: 60px;
+                margin-bottom: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="confirmation-container">
+        <div class="confirmation-header">
+            <svg class="icon-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+            </svg>
+            <h1 class="confirmation-title">Confirmed!</h1>
+            <p class="confirmation-subtitle">Your email has been successfully verified.</p>
+        </div>
+
+        <p class="confirmation-message">
+            Thank you for verifying your email address. Your account is now active and ready to use.
+            You have full access to all the features of our very fun Blue potato website.
+        </p>
+        <p class="confirmation-message">
+            Get ready for a world of Blue potato-filled fun!
+        </p>
+
+        <p class="non-interactive-button">
+            You can now exit and return to the very fun Blue potato website
+        </p>
+    </div>
+
+</body>
+</html>
